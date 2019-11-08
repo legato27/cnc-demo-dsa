@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Pan Isabelle</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- build:css -->
+  <link rel="stylesheet" href="../../assets/sdp/styles/style.min.css">
+  <link rel="stylesheet" href="../../assets/sdp/styles/oi-style.css">
+  <!-- endbuild -->
+</head>
+<body class="sdp step-3">
+  <header id="mainHeader">
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="#" class="btn-back">
+        <svg class="icon icon-arrow-prev " role="img" aria-hidden="true">
+          <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-arrow-prev"></use>
+        </svg>
+      </a>
+      <div class="steps">
+        <ul>
+          <li class="list-step-1">
+            <a href="step-1.html">
+              <div class="steps--icon">
+                <small>
+                  <svg class="icon icon-tick " role="img" aria-hidden="true">
+                    <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-tick"></use>
+                  </svg>
+                </small>
+                <svg class="icon icon-stepper-active " role="img" aria-hidden="true">
+                  <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-stepper-active"></use>
+                </svg>
+                <span>1</span>
+              </div>
+              <div class="steps--text">Customer</div>
+            </a>
+          </li>
+          <li class="list-step-2">
+            <a href="step-2.html">
+              <div class="steps--icon">
+                <small>
+                  <svg class="icon icon-tick " role="img" aria-hidden="true">
+                    <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-tick"></use>
+                  </svg>
+                </small>
+                <svg class="icon icon-stepper-active " role="img" aria-hidden="true">
+                  <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-stepper-active"></use>
+                </svg>
+                <span>2</span>
+              </div>
+              <div class="steps--text">Vehicle Purchase</div>
+            </a>
+          </li>
+          <li class="list-step-3">
+            <a href="step-3.html">
+              <div class="steps--icon">
+                <small>
+                  <svg class="icon icon-tick " role="img" aria-hidden="true">
+                    <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-tick"></use>
+                  </svg>
+                </small>
+                <svg class="icon icon-stepper-active " role="img" aria-hidden="true">
+                  <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-stepper-active"></use>
+                </svg>
+                <span>3</span>
+              </div>
+              <div class="steps--text">Finance &amp; Insurance</div>
+            </a>
+          </li>
+          <li class="list-step-4">
+            <a href="step-4.html">
+              <div class="steps--icon">
+                <small>
+                  <svg class="icon icon-tick " role="img" aria-hidden="true">
+                    <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-tick"></use>
+                  </svg>
+                </small>
+                <svg class="icon icon-stepper-active " role="img" aria-hidden="true">
+                  <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-stepper-active"></use>
+                </svg>
+                <span>4</span>
+              </div>
+              <div class="steps--text">Trade-in</div>
+            </a>
+          </li>
+          <li class="list-step-5">
+            <a href="step-5.html">
+              <div class="steps--icon">
+                <small>
+                  <svg class="icon icon-tick " role="img" aria-hidden="true">
+                    <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-tick"></use>
+                  </svg>
+                </small>
+                <svg class="icon icon-stepper-active " role="img" aria-hidden="true">
+                  <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-stepper-active"></use>
+                </svg>
+                <span>5</span>
+              </div>
+              <div class="steps--text">Deposit</div>
+            </a>
+          </li>
+          <li class="list-step-6">
+            <a href="step-6.html">
+              <div class="steps--icon">
+                <small>
+                  <svg class="icon icon-tick " role="img" aria-hidden="true">
+                    <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-tick"></use>
+                  </svg>
+                </small>
+                <svg class="icon icon-stepper-active " role="img" aria-hidden="true">
+                  <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-stepper-active"></use>
+                </svg>
+                <span>6</span>
+              </div>
+              <div class="steps--text">Review</div>
+            </a>
+          </li>
+        </ul>
+        <div class="bg-line"></div>
+      </div>
+  
+      <a href="../../index.html" class="btn-save">Save &amp; Exit</a>
+    </div>
+  </header>
+  <header class="d-none editHeader">
+    <h2>Editing</h2>
+    <span onclick="modStep3.submitFinanceInsurance();">
+      <h4>Save changes</h4>
+    </span>
+  </header>
+  <main role="main">
+    <section class="section-wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <form id="financeInsuranceForm" class="form-init" onsubmit="modStep3.submitFinanceInsurance();return false" novalidate>
+              <!-- Title -->
+              <div class="page-title">
+                <h1>Finance & Insurance</h1>
+              </div>
+
+              <!-- finance -->
+              <h2>Finance</h2>
+              <!-- Payment -->
+              <div id="payment" class="form-group radio-group">
+                <label>Payment</label>
+                <div class="btn-group-toggle d-flex" data-toggle="buttons">
+                  <label class="btn btn-radio-tick">
+                    <input type="radio" name="payment" value="loan" id="loan" autocomplete="off"> Car Loan
+                  </label>
+  
+                  <label class="btn btn-radio-tick">
+                    <input type="radio" name="payment" value="full" id="full" autocomplete="off"> Full Payment
+                  </label>
+                </div>
+              </div>
+              <div id="financeCompany">
+                <div class="form-group">
+                  <label>Finance Company</label>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" id="inHouse" name="inHouse" class="custom-control-input" disabled>
+                    <label class="custom-control-label" for="inHouse">In House</label>
+                  </div>
+                </div>
+                <div class="form-group d-none" id="finCoIn">
+                  <select class="custom-select" name="finCo" aria-required="true" >
+                    <option value="" selected>Select</option>
+                    <option value="Citibank Singapore Limited">Citibank Singapore Limited</option>
+                    <option value="Maybank Singapore Limited">Maybank Singapore Limited</option>
+                    <option value="DBS Bank Ltd">DBS Bank Ltd</option>
+                    <option value="Hitachi Capital Asia Pacific Pte Ltd">Hitachi Capital Asia Pacific Pte Ltd</option>
+                    <option value="AIG Asia Pacific Insurance Pte Ltd">AIG Asia Pacific Insurance Pte Ltd</option>
+                    <option value="Goldbell Financial Services Pte Ltd">Goldbell Financial Services Pte Ltd</option>
+                    <option value="HL Bank">HL Bank</option>
+                    <option value="United Overseas Bank Limited">United Overseas Bank Limited</option>
+                    <option value="Standard Chartered Bank (Singapore) Ltd">Standard Chartered Bank (Singapore) Ltd</option>
+                    <option value="Daimler Financial Services Africa & Asia Pacific Ltd">Daimler Financial Services Africa & Asia Pacific Ltd</option>
+                  </select>
+                  <svg class="icon icon-chevron-down " role="img" aria-hidden="true">
+                    <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-chevron-down"></use>
+                  </svg>
+                </div>
+                <div class="form-group d-none" id="finCoOut">
+                  <input type="text" class="form-control select" name="finCo" id="finCoOutInput" autocomplete="off" placeholder="Enter Finance Company">
+                  <ul class="d-none select-list" id="finCoOutList">
+                    <li>Aareal Bank Asia Limited</li>
+                    <li>ABN Amro Bank N.V.</li>
+                    <li>ABN Amro Clearing Bank N.V.</li>
+                    <li>Abu Dhabi Commerical Bank</li>
+                    <li>ANZ Singapore Ltd</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div id="finAndRate" class="row">
+                <div class="col-6">
+                  <div class="form-group with-currency">
+                    <label for="finAmt">Amount to Finance</label>
+                    <div class="d-flex">
+                      <span class="currency">$</span>
+                      <input type="text" class="form-control input-numbers-only is-number money" name="finAmt" id="finAmt" aria-describedby="finAmt" value="" aria-required="true" pattern="\d*">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group with-currency">
+                    <label for="rate">Rate(% p.a.)</label>
+                    <div class="d-flex">
+                      <span class="currency">%</span>
+                      <input type="text" class="form-control is-percentage input-numbers-only money" name="rate" id="rate" aria-describedby="rate" value="" pattern="\d*" aria-required="true">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="terms" class="form-group radio-group">
+                <label>Terms (Years)</label>
+                <div class="btn-group-toggle" data-toggle="buttons">
+                  <label class="btn btn-radio-circ">
+                    <input type="radio" name="terms" value="1" autocomplete="off" disabled>1
+                  </label>
+                  <label class="btn btn-radio-circ">
+                    <input type="radio" name="terms" value="2" autocomplete="off" disabled>2
+                  </label>
+                  <label class="btn btn-radio-circ">
+                    <input type="radio" name="terms" value="3" autocomplete="off" disabled>3
+                  </label>
+                  <label class="btn btn-radio-circ">
+                    <input type="radio" name="terms" value="4" autocomplete="off" disabled>4
+                  </label>
+                  <label class="btn btn-radio-circ">
+                    <input type="radio" name="terms" value="5" autocomplete="off" disabled>5
+                  </label>
+                  <label class="btn btn-radio-circ">
+                    <input type="radio" name="terms" value="6" autocomplete="off" disabled>6
+                  </label>
+                  <label class="btn btn-radio-circ">
+                    <input type="radio" name="terms" value="7" autocomplete="off" disabled>7
+                  </label>
+                  <label class="btn btn-radio-circ">
+                    <input type="radio" name="terms" value="8" autocomplete="off" disabled>8
+                  </label>
+                  <label class="btn btn-radio-circ">
+                    <input type="radio" name="terms" value="9" autocomplete="off" disabled>9
+                  </label>
+                  <label class="btn btn-radio-circ">
+                    <input type="radio" name="terms" value="10" autocomplete="off" disabled>10
+                  </label>
+                </div>
+              </div>
+
+              <div id="monthlyInstalment" class="row">
+                <div class="col-6">
+                  <div class="form-group prefilled with-currency">
+                    <label for="mthInst">Monthly Instalment</label>
+                    <div class="d-flex">
+                      <span class="currency">$</span>
+                      <input type="text" class="form-control" id="mthInst" name="mthInst" aria-describedby="mthInst" placeholder="" aria-required="true" disabled>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- insurance -->
+              <h2>Insurance</h2>
+              <div id="insCo">
+                <div class="form-group">
+                  <label for="newInsCo">New Insurance Company</label>
+                  <!-- <select class="custom-select" name="newInsCo" id="newInsCo" aria-required="true">
+                    <option value="">Select</option>
+                    <option value="AIG Asia Pacific Insurance Pte Ltd" selected>AIG Asia Pacific Insurance Pte Ltd</option>
+                    <option value="AXA">AXA</option>
+                    <option value="Aviva">Aviva</option>
+                  </select>
+                  <svg class="icon icon-chevron-down " role="img" aria-hidden="true">
+                    <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-chevron-down"></use>
+                  </svg> -->
+                  <input type="text" class="form-control select" name="newInsCo" id="newInsCo" autocomplete="off" placeholder="Enter Finance Company" value="AIG Asia Pacific Insurance Pte Ltd">
+                  <ul class="d-none select-list" id="newInsCoList">
+                    <li>AIG Asia Pacific Insurance Pte Ltd</li>
+                    <li>AXA</li>
+                    <li>Aviva</li>
+                  </ul>
+                </div>
+                <div class="form-group mb-1">
+                  <label for="oldInsCoCheck">Old Insurance Company</label>
+                  <div class="custom-control custom-checkbox">
+                    <input type="checkbox" id="oldInsCoCheck" name="oldInsCoCheck" class="custom-control-input" >
+                    <label class="custom-control-label" for="oldInsCoCheck">Old Insurance not in this list</label>
+                  </div>
+                </div>
+                <div id="oldInsCo" class="form-group">
+                  <input type="text" class="form-control select" name="oldInsCo" id="oldInsCoInput" autocomplete="off" placeholder="Enter Old Insurance Company">
+                  <ul class="d-none select-list" id="oldInsCoList">
+                    <li>AIG Asia Pacific Insurance Pte Ltd</li>
+                    <li>AXA</li>
+                    <li>Aviva</li>
+                  </ul>
+                </div>
+                <div id="oldInsCoText" class="form-group d-none">
+                  <input type="text" class="form-control" name="oldInsCoText"  aria-describedby="oldInsCoText" placeholder="Type here" aria-required="true" autocomplete="off">
+                </div>
+
+              </div>
+
+              <div class="form-group with-currency">
+                <label for="ncd">NCD (%)</label>
+                <div class="d-flex">
+                  <span class="currency">%</span>
+                  <input type="text" class="form-control is-percentage input-numbers-only money" name="ncd" id="ncd" aria-describedby="ncd" value="" pattern="\d*" aria-required="true">
+                </div>
+              </div>
+
+              <div id="insPackage" class="form-group radio-group">
+                <label>Insurance Package</label>
+                <div class="btn-group-toggle d-flex" data-toggle="buttons">
+                  <label class="btn btn-radio-tick">
+                    <input type="radio" name="insPackage" value="1 Year Premium" id="1year" autocomplete="off"> 1 Year Premium
+                  </label>
+  
+                  <label class="btn btn-radio-tick">
+                    <input type="radio" name="insPackage" value="2 Year Premium" id="2year" autocomplete="off"> 2 Year Premium
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-group with-currency">
+                <label for="payable">Premium Payable</label>
+                <div class="d-flex">
+                  <span class="currency">$</span>
+                  <input type="text" class="form-control input-numbers-only is-number money" id="payable" name="payable" aria-describedby="payable" placeholder="" aria-required="true" pattern="\d*">
+                </div>
+              </div>
+
+              <button id="mainBtn" type="submit" class="btn btn-primary btn-submit">Continue to Trade-in</button>
+              <button id="editBtn" type="submit" class="d-none btn btn-primary btn-submit">Save Changes</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+<!-- build:jsLib -->
+<script src="../../assets/sdp/scripts/libs.js"></script>
+<!-- endbuild -->
+<!-- build:jsMain -->
+<script src="../../assets/sdp/scripts/main.js"></script>
+<!-- endbuild -->
+
+</body>
+</html>

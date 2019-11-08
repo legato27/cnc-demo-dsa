@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Pan Isabelle</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- build:css -->
+  <link rel="stylesheet" href="../../assets/sdp/styles/style.min.css">
+  <link rel="stylesheet" href="../../assets/sdp/styles/oi-style.css">
+  <!-- endbuild -->
+</head>
+<body class="sdp step-1">
+  <div id="top-error"></div>
+  <header id="mainHeader">
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="#" class="btn-back">
+        <svg class="icon icon-arrow-prev " role="img" aria-hidden="true">
+          <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-arrow-prev"></use>
+        </svg>
+      </a>
+
+      <div class="steps">
+        <ul>
+          <li class="list-step-1">
+            <a href="step-1.html">
+              <div class="steps--icon">
+                <small><svg class="icon icon-tick " role="img" aria-hidden="true">
+                  <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-tick"></use>
+                </svg>
+                </small>
+                <svg class="icon icon-stepper-active " role="img" aria-hidden="true">
+                  <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-stepper-active"></use>
+                </svg>
+                <span>1</span>
+              </div>
+              <div class="steps--text">Customer</div>
+            </a>
+          </li>
+          <li class="list-step-2">
+            <a href="step-2.html">
+              <div class="steps--icon">
+                <small><svg class="icon icon-tick " role="img" aria-hidden="true">
+                  <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-tick"></use>
+                </svg>
+                </small>
+                <svg class="icon icon-stepper-active " role="img" aria-hidden="true">
+                  <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-stepper-active"></use>
+                </svg>
+                <span>2</span>
+              </div>
+              <div class="steps--text">Vehicle Purchase</div>
+            </a>
+          </li>
+          <li class="list-step-3">
+            <a href="step-3.html">
+              <div class="steps--icon">
+                <small><svg class="icon icon-tick " role="img" aria-hidden="true">
+                  <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-tick"></use>
+                </svg>
+                </small>
+                <svg class="icon icon-stepper-active " role="img" aria-hidden="true">
+                  <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-stepper-active"></use>
+                </svg>
+                <span>3</span>
+              </div>
+              <div class="steps--text">Finance &amp; Insurance</div>
+            </a>
+          </li>
+          <li class="list-step-4">
+            <a href="step-4.html">
+              <div class="steps--icon">
+                <small><svg class="icon icon-tick " role="img" aria-hidden="true">
+                  <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-tick"></use>
+                </svg>
+                </small>
+                <svg class="icon icon-stepper-active " role="img" aria-hidden="true">
+                  <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-stepper-active"></use>
+                </svg>
+                <span>4</span>
+              </div>
+              <div class="steps--text">Trade-in</div>
+            </a>
+          </li>
+          <li class="list-step-5">
+            <a href="step-5.html">
+              <div class="steps--icon">
+                <small><svg class="icon icon-tick " role="img" aria-hidden="true">
+                  <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-tick"></use>
+                </svg>
+                </small>
+                <svg class="icon icon-stepper-active " role="img" aria-hidden="true">
+                  <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-stepper-active"></use>
+                </svg>
+                <span>5</span>
+              </div>
+              <div class="steps--text">Deposit</div>
+            </a>
+          </li>
+          <li class="list-step-6">
+            <a href="step-6.html">
+              <div class="steps--icon">
+                <small><svg class="icon icon-tick " role="img" aria-hidden="true">
+                  <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-tick"></use>
+                </svg>
+                </small>
+                <svg class="icon icon-stepper-active " role="img" aria-hidden="true">
+                  <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-stepper-active"></use>
+                </svg>
+                <span>6</span>
+              </div>
+              <div class="steps--text">Review</div>
+            </a>
+          </li>
+        </ul>
+        <div class="bg-line"></div>
+      </div>
+
+      <a href="../../index.html" class="btn-save">Save &amp; Exit</a>
+    </div>
+  </header>
+  <header class="d-none editHeader">
+    <h2>Editing</h2>
+    <span onclick="modStep1.submitCustomerDetails()">
+      <h4>Save changes</h4>
+    </span>
+  </header>
+<main role="main">
+  <section class="section-wrapper">
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-12 col-md-11">
+          <form id="customerDetailsForm" class="form-init" onsubmit="modStep1.submitCustomerDetails(); return false;" novalidate>
+            <!-- Title -->
+            <div class="page-title">
+              <h1>Customer Details</h1>
+            </div>
+
+            <!-- Full Name -->
+            <div class="form-group prefilled">
+              <label for="idFullname">Full Name (as per NRIC/FIN/Passport)</label>
+              <input type="text" class="form-control" name="fullname" id="idFullname" aria-describedby="idFullname" value="Pan Isabelle" aria-required="true" disabled>
+            </div>
+
+            <!-- Salutation -->
+            <div id="salutation" class="form-group radio-group">
+              <label>Salutation</label>
+              <div class="btn-group-toggle d-flex" data-toggle="buttons">
+                <label class="btn btn-radio-tick">
+                  <input type="radio" name="salutation" value="Mr" id="mr" autocomplete="off"> Mr
+                </label>
+
+                <label class="btn btn-radio-tick">
+                  <input type="radio" name="salutation" value="Mrs" id="mrs" autocomplete="off"> Mrs
+                </label>
+
+                <label class="btn btn-radio-tick">
+                  <input type="radio" name="salutation" value="Ms" id="ms" autocomplete="off"> Ms
+                </label>
+
+                <label class="btn btn-radio-tick">
+                  <input type="radio" name="salutation" value="Mdm" id="mdm" autocomplete="off"> Mdm
+                </label>
+
+                <label class="btn btn-radio-tick">
+                  <input type="radio" name="salutation" value="Dr" id="dr" autocomplete="off"> Dr
+                </label>
+              </div>
+            </div>
+
+            <!-- First and Last Name -->
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <label for="idFname">First Name</label>
+                  <input type="text" class="form-control" name="fname" id="idFname" aria-describedby="idFname" placeholder="Preferred Name" aria-required="true">
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-group">
+                  <label for="idLname">Surname</label>
+                  <input type="text" class="form-control" name="lname" id="idLname" aria-describedby="idLname" placeholder="Family Name" aria-required="true">
+                </div>
+              </div>
+            </div>
+
+            <!-- NRIC/FIN/Passport -->
+            <div class="form-group prefilled">
+              <label for="idNRIC">NRIC/FIN/Passport</label>
+              <input type="text" class="form-control" name="nric" id="idNRIC" aria-describedby="idNRIC" value="S8459923I" aria-required="false" disabled>
+            </div>
+
+            <!-- Upload Supporting Docs -->
+            <div class="form-group">
+              <label>Upload Supporting Documents (Required for Registration)</label>
+              <div class="upload-docs">
+                <!-- Upload: NRIC (front) -->
+                <div name="icFront" class="upload-docs--item">
+                  <a href="" class="btn-remove">
+                    <svg class="icon icon-times " role="img" aria-hidden="true">
+                      <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-times"></use>
+                    </svg>
+                  </a>
+
+                  <label for="icFront" class="add-photo">
+                    <div class="icon-link">
+                      <svg class="icon icon-add" role="img" aria-hidden="true">
+                        <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-add"></use>
+                      </svg>
+                    </div>
+                    <input type="file" name="icFront" id="icFront" class="d-none">
+                    <div class="thumbnail">
+                      <img src="" class="responsive-img">
+                    </div>
+                  </label>
+
+                  <label for="icFront" class="link-text">NRIC/FIN (front)</label>
+                </div>
+
+                <!-- Upload: NRIC (back) -->
+                <div name="icBack" class="upload-docs--item">
+                  <a href="#/" class="btn-remove">
+                    <svg class="icon icon-times " role="img" aria-hidden="true">
+                      <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-times"></use>
+                    </svg>
+                  </a>
+
+                  <label for="icBack" class="add-photo">
+                    <div class="icon-link">
+                      <svg class="icon icon-add " role="img" aria-hidden="true">
+                        <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-add"></use>
+                      </svg>
+                    </div>
+                    <input type="file" name="icBack" id="icBack" class="d-none">
+                    <div class="thumbnail">
+                      <img src="" class="responsive-img">
+                    </div>
+                  </label>
+
+                  <label for="icBack" class="link-text">NRIC/FIN (back)</label>
+                </div>
+
+                <!-- Upload: Drive Licence (front) -->
+                <div name="dlFront" class="upload-docs--item">
+                  <a href="#/" class="btn-remove">
+                    <svg class="icon icon-times " role="img" aria-hidden="true">
+                      <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-times"></use>
+                    </svg>
+                  </a>
+
+                  <label for="dlFront" class="add-photo">
+                    <div class="icon-link">
+                      <svg class="icon icon-add" role="img" aria-hidden="true">
+                        <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-add"></use>
+                      </svg>
+                    </div>
+                    <input type="file" name="dlFront" id="dlFront" class="d-none">
+                    <div class="thumbnail">
+                      <img src="" class="responsive-img">
+                    </div>
+                  </label>
+
+                  <label for="dlFront" class="link-text">Driving Licence (front)</label>
+                </div>
+
+                <!-- Upload: Drive Licence (back) -->
+                <div name="dlBack" class="upload-docs--item">
+                  <a href="#/" class="btn-remove">
+                    <svg class="icon icon-times " role="img" aria-hidden="true">
+                      <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-times"></use>
+                    </svg>
+                  </a>
+
+                  <label for="dlBack" class="add-photo">
+                    <div class="icon-link">
+                      <svg class="icon icon-add " role="img" aria-hidden="true">
+                        <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-add"></use>
+                      </svg>
+                    </div>
+                    <input type="file" name="dlBack" id="dlBack" class="d-none">
+                    <div class="thumbnail">
+                      <img src="" class="responsive-img">
+                    </div>
+                  </label>
+
+                  <label for="dlBack" class="link-text">Driving Licence (back)</label>
+                </div>
+                <!-- Upload: Drive Licence (back) -->
+                <div name="passport" class="upload-docs--item">
+                  <a href="#/" class="btn-remove">
+                    <svg class="icon icon-times " role="img" aria-hidden="true">
+                      <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-times"></use>
+                    </svg>
+                  </a>
+
+                  <label for="passport" class="add-photo">
+                    <div class="icon-link">
+                      <svg class="icon icon-add " role="img" aria-hidden="true">
+                        <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-add"></use>
+                      </svg>
+                    </div>
+                    <input type="file" name="passport" id="passport" class="d-none">
+                    <div class="thumbnail">
+                      <img src="" class="responsive-img">
+                    </div>
+                  </label>
+
+                  <label for="passport" class="link-text">Passport</label>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- First and Last Name -->
+            <div class="row">
+              <div class="col">
+                <div class="form-group prefilled">
+                  <label for="idMobile">Mobile Number</label>
+                  <input type="tel" class="form-control" name="mobile" id="idMobile" aria-describedby="idMobile" value="91234567" aria-required="false" disabled>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-group">
+                  <label for="idMobile2">Secondary Contact Number (Optional)</label>
+                  <input type="tel" class="form-control" name="mobile2" id="idMobile2" aria-describedby="idMobile2" placeholder="Home/Office Number" aria-required="true" >
+                  <span class="field-error">Must contain at least 8 numeric characters</span>
+                  <span class="field-error">Must start with 6,8 or 9 or "+"</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group prefilled">
+              <label for="idName">Email</label>
+              <input type="email" class="form-control" name="email" id="idName" aria-describedby="idName" value="isabelle.pan@gmail.com" aria-required="true" disabled>
+            </div>
+
+            <!-- Date -->
+            <div class="form-group">
+              <label>Date of Birth</label>
+              <input type="text" class="form-control" name="bdate" id='bdate' aria-required="true" placeholder="DD/MM/YYYY" pattern="[\d//]*" maxlength="10" >
+              <span class="field-error">Please enter a valid birthdate</span>
+            </div>
+
+            <!-- Gender -->
+            <div id="gender" class="form-group radio-group">
+              <label>Gender</label>
+              <div class="btn-group-toggle d-flex" data-toggle="buttons">
+                <label class="btn btn-radio-tick">
+                  <input type="radio" name="gender" value="Male" id="male" autocomplete="off"> Male
+                </label>
+
+                <label class="btn btn-radio-tick">
+                  <input type="radio" name="gender" value="Female" id="female" autocomplete="off"> Female
+                </label>
+              </div>
+            </div>
+
+            <!-- Marital Status -->
+            <div class="form-group radio-group">
+              <label>Marital Status</label>
+              <div class="btn-group-toggle d-flex" data-toggle="buttons">
+                <label class="btn btn-radio-tick">
+                  <input type="radio" name="maritalStatus" value="Single" id="single" autocomplete="off"> Single
+                </label>
+
+                <label class="btn btn-radio-tick">
+                  <input type="radio" name="maritalStatus" value="Married" id="married" autocomplete="off"> Married
+                </label>
+              </div>
+            </div>
+
+            <!-- Address Primary -->
+            <div id="primaryAddress" class="address-primary">
+              <h2>Registered Address</h2>
+
+              <div id="postalCode" class="form-group with-search">
+                <label for="idPostal">Postal Code</label>
+                <input type="number" class="form-control" name="postal" id="idPostal" aria-describedby="idPostal" placeholder="Enter postal code" aria-required="true" maxlength="6" pattern="\d*">
+                <svg class="icon icon-search " role="img" aria-hidden="true">
+                  <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-search"></use>
+                </svg>
+                <span class="field-error">Please enter a valid postal code</span>
+              </div>
+
+              <div id="streetName" class="form-group d-none">
+                <label for="idStreet">Street Name</label>
+                <input type="text" class="form-control" name="street" id="idStreet" aria-describedby="idStreet" value="" aria-required="true" >
+              </div>
+
+              <div id="floorUnit" class="form-group d-none">
+                <label for="idFloorUnit">Floor/Unit</label>
+                <input type="text" class="form-control" name="floor" id="idFloorUnit" aria-describedby="idFloorUnit" value="" aria-required="true" >
+              </div>
+
+              <div id="buildingName" class="form-group d-none">
+                <label for="idBuildingName">Building Name (Optional)</label>
+                <input type="text" class="form-control" name="building" id="idBuildingName" aria-describedby="idBuildingName" placeholder="Type here" aria-required="false">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <span class="">If your mailing address is different from registered address</span>
+
+              </div>
+            </div>
+            <a href="#" id="btnAddMailing" class="btn-add mt-4">
+              <span>
+                <svg class="icon icon-add " role="img" aria-hidden="true">
+                  <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-add"></use>
+                </svg>
+              </span>
+              Add Mailing Address
+            </a>
+
+            <!-- Address Mailing -->
+            <div id="mailingAddress" class="address-mailing d-none">
+              <h2 class="mt-4">Mailing Address <a href="#" id="btnRemoveMailing" class="h2-link">Remove</a></h2>
+
+              <div id="postalCode2" class="form-group with-search">
+                <label for="idPostal2">Postal Code</label>
+                <input type="text" class="form-control" name="postal2" id="idPostal2" aria-describedby="idPostal2" placeholder="Enter postal code" aria-required="true" maxlength="6" disabled>
+                <svg class="icon icon-search " role="img" aria-hidden="true">
+                  <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-search"></use>
+                </svg>
+                <span class="field-error">Please enter a valid postal code</span>
+              </div>
+
+              <div id="streetName2" class="form-group d-none">
+                <label for="idStreet2">Street Name</label>
+                <input type="text" class="form-control" name="street2" id="idStreet2" aria-describedby="idStreet2" value="239 Alexandra Rd" placeholder="Type here" aria-required="true" disabled>
+              </div>
+
+              <div id="floorUnit" class="form-group d-none">
+                <label for="idFloorUnit2">Floor/Unit</label>
+                <input type="text" class="form-control" name="floor2" id="idFloorUnit2" aria-describedby="idFloorUnit2" value="#01-01" placeholder="Type here" aria-required="true" disabled>
+              </div>
+
+              <div id="buildingName" class="form-group d-none">
+                <label for="idBuildingName2">Building Name (Optional)</label>
+                <input type="text" class="form-control" name="building2" id="idBuildingName2" aria-describedby="idBuildingName2" value="Cycle & Carriage" placeholder="Type here" aria-required="false" disabled>
+              </div>
+            </div>
+
+            <!-- <a href="step-2.html" class="btn btn-primary btn-submit mt-40">Continue to Vehicle Purchase</a> -->
+            <button id="mainBtn" type="submit" class="btn btn-primary btn-submit" disabled>Continue to Vehicle Purchase</button>
+            <button id="editBtn" type="submit" class="d-none btn btn-primary btn-submit">Save Changes</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+</body>
+</html>

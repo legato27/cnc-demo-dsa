@@ -1,0 +1,658 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Tan Wee Teck James</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- build:css -->
+  <link rel="stylesheet" href="../../assets/sdp/styles/style.min.css">
+  <link rel="stylesheet" href="../../assets/sdp/styles/oi-style.css">
+  <!-- endbuild -->
+</head>
+<body class="sdp step-2">
+  <header>
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="#" class="btn-back">
+        <svg class="icon icon-arrow-prev " role="img" aria-hidden="true">
+          <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-arrow-prev"></use>
+        </svg>
+      </a>
+  
+      <div class="steps">
+        <ul>
+          <li class="list-step-1">
+            <a href="step-1.html">
+              <div class="steps--icon">
+                <small>
+                  <svg class="icon icon-tick " role="img" aria-hidden="true">
+                    <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-tick"></use>
+                  </svg>
+                </small>
+                <svg class="icon icon-stepper-active " role="img" aria-hidden="true">
+                  <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-stepper-active"></use>
+                </svg>
+                <span>1</span>
+              </div>
+              <div class="steps--text">Customer</div>
+            </a>
+          </li>
+          <li class="list-step-2">
+            <a href="step-2.html">
+              <div class="steps--icon">
+                <small>
+                  <svg class="icon icon-tick " role="img" aria-hidden="true">
+                    <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-tick"></use>
+                  </svg>
+                </small>
+                <svg class="icon icon-stepper-active " role="img" aria-hidden="true">
+                  <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-stepper-active"></use>
+                </svg>
+                <span>2</span>
+              </div>
+              <div class="steps--text">Vehicle Purchase</div>
+            </a>
+          </li>
+          <li class="list-step-3">
+            <a href="step-3.html">
+              <div class="steps--icon">
+                <small>
+                  <svg class="icon icon-tick " role="img" aria-hidden="true">
+                    <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-tick"></use>
+                  </svg>
+                </small>
+                <svg class="icon icon-stepper-active " role="img" aria-hidden="true">
+                  <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-stepper-active"></use>
+                </svg>
+                <span>3</span>
+              </div>
+              <div class="steps--text">Finance &amp; Insurance</div>
+            </a>
+          </li>
+          <li class="list-step-4">
+            <a href="step-4.html">
+              <div class="steps--icon">
+                <small>
+                  <svg class="icon icon-tick " role="img" aria-hidden="true">
+                    <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-tick"></use>
+                  </svg>
+                </small>
+                <svg class="icon icon-stepper-active " role="img" aria-hidden="true">
+                  <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-stepper-active"></use>
+                </svg>
+                <span>4</span>
+              </div>
+              <div class="steps--text">Trade-in</div>
+            </a>
+          </li>
+          <li class="list-step-5">
+            <a href="step-5.html">
+              <div class="steps--icon">
+                <small>
+                  <svg class="icon icon-tick " role="img" aria-hidden="true">
+                    <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-tick"></use>
+                  </svg>
+                </small>
+                <svg class="icon icon-stepper-active " role="img" aria-hidden="true">
+                  <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-stepper-active"></use>
+                </svg>
+                <span>5</span>
+              </div>
+              <div class="steps--text">Deposit</div>
+            </a>
+          </li>
+          <li class="list-step-6">
+            <a href="step-6.html">
+              <div class="steps--icon">
+                <small>
+                  <svg class="icon icon-tick " role="img" aria-hidden="true">
+                    <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-tick"></use>
+                  </svg>
+                </small>
+                <svg class="icon icon-stepper-active " role="img" aria-hidden="true">
+                  <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-stepper-active"></use>
+                </svg>
+                <span>6</span>
+              </div>
+              <div class="steps--text">Review</div>
+            </a>
+          </li>
+        </ul>
+        <div class="bg-line"></div>
+      </div>
+  
+      <a href="../../index.html" class="btn-save">Save &amp; Exit</a>
+    </div>
+  </header>
+<main role="main">
+  <section class="section-wrapper">
+    <form id="vehiclePurchaseForm" class="form-init" onsubmit="modStep2.submitVehiclePurchase();return false" novalidate>
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col-12 col-md-11">
+            <!-- Title -->
+            <div class="page-title">
+              <h1>Vehicle Purchase</h1>
+            </div>
+
+            <!-- Vehicle Variants -->
+            <div class="vehicle-variant">
+              <ul>
+                <li>
+                  <svg class="icon icon-car " role="img" aria-hidden="true">
+                    <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-car"></use>
+                  </svg>
+                  <div class="vehicle-variant--text">
+                    Model
+                    <span id="model"></span>
+                  </div>
+                </li>
+                <li>
+                  <svg class="icon icon-colour " role="img" aria-hidden="true">
+                    <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-colour"></use>
+                  </svg>
+                  <div class="vehicle-variant--text">
+                    Colour
+                    <span id="colour"></span>
+                  </div>
+                </li>
+                <li>
+                  <svg class="icon icon-trim " role="img" aria-hidden="true">
+                    <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-trim"></use>
+                  </svg>
+                  <div class="vehicle-variant--text">
+                    Trim
+                    <span id="trim"></span>
+                  </div>
+                </li>
+                <li>
+                  <svg class="icon icon-coe " role="img" aria-hidden="true">
+                    <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-coe"></use>
+                  </svg>
+                  <div class="vehicle-variant--text">
+                    COE
+                    <span id="coeCategory"></span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <h2>COE</h2>
+
+            <!-- Purchase with COE? -->
+            <div id="purchaseWithCOE" class="form-group radio-group">
+              <label>Purchase with COE?</label>
+              <div class="btn-group-toggle d-flex" data-toggle="buttons">
+                <label class="btn btn-radio-tick">
+                  <input type="radio" name="purchaseWithCOE" value="Yes" autocomplete="off"> Yes
+                </label>
+
+                <label class="btn btn-radio-tick">
+                  <input type="radio" name="purchaseWithCOE" value="No" autocomplete="off"> No
+                </label>
+              </div>
+            </div>
+
+            <!-- Package -->
+            <div id="packageCOE" class="form-group radio-group">
+              <label>Package</label>
+              <div class="btn-group-toggle d-flex" data-toggle="buttons">
+                <label class="btn btn-radio-tick">
+                  <input type="radio" name="packageCOE" value="Non-Guaranteed" id="nonGuaranteed" autocomplete="off" disabled> Non-Guaranteed COE
+                </label>
+
+                <label class="btn btn-radio-tick">
+                  <input type="radio" name="packageCOE" value="Guaranteed" id="guaranteed" autocomplete="off" disabled> Guaranteed COE
+                </label>
+              </div>
+            </div>
+
+            <!-- Number of COE Bids -->
+            <div id="numberCEObids" class="form-group radio-group">
+              <label>Number of COE Bids</label>
+              <div class="btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-radio-circ">
+                  <input type="radio" name="numBids" value="1" id="bid1" autocomplete="off" disabled> 1
+                </label>
+
+                <label class="btn btn-radio-circ">
+                  <input type="radio" name="numBids" value="2" id="bid2" autocomplete="off" disabled> 2
+                </label>
+
+                <label class="btn btn-radio-circ">
+                  <input type="radio" name="numBids" value="3" id="bid3" autocomplete="off" disabled> 3
+                </label>
+
+                <label class="btn btn-radio-circ">
+                  <input type="radio" name="numBids" value="4" id="bid4" autocomplete="off" disabled> 4
+                </label>
+
+                <label class="btn btn-radio-circ">
+                  <input type="radio" name="numBids" value="5" id="bid5" autocomplete="off" disabled> 5
+                </label>
+
+                <label class="btn btn-radio-circ">
+                  <input type="radio" name="numBids" value="6" id="bid6" autocomplete="off" disabled> 6
+                </label>
+
+                <label class="btn btn-radio-circ">
+                  <input type="radio" name="numBids" value="7" id="bid7" autocomplete="off" disabled> 7
+                </label>
+
+                <label class="btn btn-radio-circ">
+                  <input type="radio" name="numBids" value="8" id="bid8" autocomplete="off" disabled> 8
+                </label>
+              </div>
+            </div>
+
+            <!-- COE Charged/Rebate -->
+            <div id="chargedRebateCOE" class="form-group with-currency is-disabled">
+              <label for="idCOECharged">COE Charged/Rebate</label>
+              <div class="d-flex">
+                <span class="currency">$</span>
+                <input type="text" class="form-control is-number input-numbers-only money" name="coeCharged" id="coeCharged" aria-describedby="idCOECharged" value="30,000" aria-required="true" pattern="\d*" inputmode="numeric" disabled>
+              </div>
+              <span class="message">Not applicable for packages utilising Open Category COE</span>
+            </div>
+
+            <!-- Checkbox -->
+            <div id="openCategoryCOE" class="form-group with-checkbox is-disabled">
+              <label>Open Category COE Option</label>
+
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="openCatOption" name="openCatOption" value="Selected" disabled>
+                <label class="custom-control-label" for="openCatOption">
+                  Yes, willing to accept Open Cat COE (CAT E) allocation
+                </label>
+              </div>
+            </div>
+
+            <div id="openCategoryCOE1" class="form-group with-currency d-none">
+              <label for="openCatCOE">Open Category (Cat E)</label>
+              <div class="d-flex">
+                <span class="currency">$</span>
+                <input type="text" class="form-control is-number input-numbers-only" name="openCatCOE" id="openCatCOE" aria-describedby="openCatCOE" aria-required="true">
+              </div>
+            </div>
+
+            <div id="openCategoryCOE2" class="form-group with-currency d-none">
+              <label for="openCatPremium">Corresponding COE Category's Quota Premium</label>
+              <div class="d-flex">
+                <span class="currency">$</span>
+                <input type="text" class="form-control is-number input-numbers-only" name="openCatPremium" id="openCatPremium" aria-describedby="openCatPremium" aria-required="true">
+              </div>
+            </div>
+
+            <h2>Registration</h2>
+
+            <!-- Registration Number -->
+            <div id="registrationNumber" class="form-group radio-group">
+              <label>Registration Number</label>
+              <div class="btn-group-toggle d-flex" data-toggle="buttons">
+                <label class="btn btn-radio-tick">
+                  <input type="radio" name="registrationType" value="Normal" id="normal" autocomplete="off"> Normal
+                </label>
+
+                <label class="btn btn-radio-tick">
+                  <input type="radio" name="registrationType" value="Off Peak" id="offPeak" autocomplete="off"> Off Peak Car
+                </label>
+              </div>
+            </div>
+
+            <!-- Accordion: RNM -->
+            <div id="regNumberMethod" class="form-group with-accordion">
+              <label>Registration Number Method</label>
+            
+              <div class="accordion" id="accordionRNM" role="tablist" aria-multiselectable="false">
+                <!-- Accordion card 1 -->
+                <div class="card">
+                  <!-- Card header -->
+                  <div class="card-header" role="tab" id="headingOne1">
+                    <a data-toggle="collapse" data-parent="#accordionRNM" href="#collapseOne1" aria-expanded="false"
+                      aria-controls="collapseOne1">
+                      <h5 class="mb-0">
+                          LTA Assigned Number (for new car)
+                      </h5>
+                    </a>
+                  </div>
+            
+                  <!-- Card body -->
+                  <div id="collapseOne1" class="collapse" role="tabpanel" aria-labelledby="headingOne1" data-parent="#accordionRNM">
+                    <!-- <div class="collapse-body">Lorem ipsum 1</div> -->
+                  </div>
+                </div>
+            
+                <!-- Accordion card 2 -->
+                <div class="card">
+                  <!-- Card header -->
+                  <div class="card-header" role="tab" id="headingTwo2">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordionRNM" href="#collapseTwo2"
+                      aria-expanded="false" aria-controls="collapseTwo2">
+                      <h5 class="mb-0">
+                        Number Retention (for new car) & Acceptance of Random Number (for used car)
+                      </h5>
+                    </a>
+                  </div>
+            
+                  <!-- Card body -->
+                  <div id="collapseTwo2" class="collapse" role="tabpanel" aria-labelledby="headingTwo2" data-parent="#accordionRNM">
+                    <div class="collapse-body">
+                      <div class="form-group form-group--last">
+                        <label for="idName1">Used Car Registration Number</label>
+                        <input type="text" class="form-control text-uppercase" name="usedCarRegNo" id="usedCarRegNo1" aria-describedby="idName1" aria-required="true" disabled>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            
+                <!-- Accordion card 3 -->
+                <div class="card">
+                  <!-- Card header -->
+                  <div class="card-header" role="tab" id="headingThree3">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordionRNM" href="#collapseThree3"
+                      aria-expanded="false" aria-controls="collapseThree3">
+                      <h5 class="mb-0">
+                        Number Retention (for new car) & Use of Purchaser-Bid Number (for used car)
+                      </h5>
+                    </a>
+                  </div>
+            
+                  <!-- Card body -->
+                  <div id="collapseThree3" class="collapse" role="tabpanel" aria-labelledby="headingThree3" data-parent="#accordionRNM">
+                    <div class="collapse-body">
+                      <div class="form-group form-group--last">
+                        <label for="idName2">Used Car Registration Number</label>
+                        <input type="text" class="form-control text-uppercase" name="usedCarRegNo" id="usedCarRegNo2" aria-describedby="idName2" aria-required="true" disabled>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            
+                <!-- Accordion card 4 -->
+                <div class="card">
+                  <!-- Card header -->
+                  <div class="card-header" role="tab" id="headingFour4">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordionRNM" href="#collapseFour4"
+                      aria-expanded="false" aria-controls="collapseFour4">
+                      <h5 class="mb-0">
+                        Purchasing-Bid Number (for new car)
+                      </h5>
+                    </a>
+                  </div>
+            
+                  <!-- Card body -->
+                  <div id="collapseFour4" class="collapse" role="tabpanel" aria-labelledby="headingFour4" data-parent="#accordionRNM">
+                    <div class="collapse-body">
+                      <div class="form-group form-group--last">
+                        <label for="idName3">Bid Number</label>
+                        <input type="text" class="form-control text-uppercase" name="usedCarRegNo" id="usedCarRegNo3" aria-describedby="idName3" aria-required="true" disabled>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Accordion card 5 -->
+                <div class="card tbd">
+                  <!-- Card header -->
+                  <div class="card-header" role="tab" id="headingFive5">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordionRNM" href="#collapseFive5"
+                      aria-expanded="false" aria-controls="collapseFive5">
+                      <h5 class="mb-0">
+                          To be decided
+                          <svg class="icon icon-alert " role="img">
+                            <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-alert"></use>
+                          </svg>
+                      </h5>
+                    </a>
+                  </div>
+            
+                  <!-- Card body -->
+                  <div id="collapseFive5" class="collapse" role="tabpanel" aria-labelledby="headingFive5" data-parent="#accordionRNM">
+                  </div>
+                </div>
+            
+                <p id="regNoHelper" class="helper-text d-none">Registration Number Method has to be decided before Registration.</p>
+              </div>
+            </div>    
+          </div>
+        </div>
+      </div>
+
+      <!-- Vehicle Purchase Price -->
+      <div class="header-snap-anchor scroller-anchor"></div>
+      <div class="header-snap scroller">
+        <div class="container">
+          <div class="row justify-content-md-center">
+            <div class="col-12 col-md-11">
+              <div class="row align-items-center">
+                <div class="col-9">
+                  <div class="header-snap--title">
+                    <h2>Vehicle Purchase Price</h2>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div id="vehicleTotalPrice" class="header-snap--price">
+                    Vehicle Total Price
+                    <span>$<strong class="currency"></strong></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Vehicle List Price -->
+      <div id="vehicleLists" class="vehicle-lists">
+        <div class="container">
+          <div class="row justify-content-md-center">
+            <div class="col-12 col-md-11">
+              <!-- Vehicle Lists -->
+              <div id="vehicleListPrice" class="vehicle-wrapper">
+                <div class="vehicle-lists--header d-flex justify-content-between">
+                  <div class="h3">Vehicle List Price</div>
+                  <div class="h3">$<span class="currency"></span></div>
+                </div>
+
+                <ul class="list-default">
+                  <li>10 Year Engine Warrantly (T&amp;C apply)</li>
+                  <li>5 Years Unlimited Mileage Warranty (T&amp;C apply)</li>
+                  <li>IU Installation</li>
+                  <li>Number Plate</li>
+                  <li>Floor Mat</li>
+                  <li>Motrex PIO for Cerato 1.6 A</li>
+                  <li id="guaranteedCOETopUp" class="d-none">Guaranteed COE Top up</li>
+                  <li id="offPeakCar" class="d-none">Off Peak Car</li>
+                </ul>
+                <div id="" class="form-group with-currency mt-5">
+                  <label for="serviceCredits">Service Credits</label>
+                  <div class="d-flex">
+                    <span class="currency">$</span>
+                    <input type="text" class="form-control is-number money" name="serviceCredits" id="serviceCredits" aria-describedby="serviceCredits" value="2,000" aria-required="true" pattern="\d*">
+                  </div>
+                  <span class="message">WEF for 2 years bases on data of registration. Non refundable & non transferable.</span>
+                </div>
+              </div>
+
+              <!-- Vehicle Add-Ons -->
+              <div id="vehicleAddOns" class="vehicle-wrapper">
+                <div class="vehicle-lists--header d-flex justify-content-between">
+                  <div class="h3">Add-Ons (Optional)</div>
+                  <div class="h3 price-wrap">$<span class="total-price">0</span></div>
+                </div>
+
+                <div class="list-delete">
+                
+                </div>
+                <a href="#" class="btn-add" data-toggle="modal" data-target="#modalAddOns">
+                  <span>
+                    <svg class="icon icon-add " role="img" aria-hidden="true">
+                      <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-add"></use>
+                    </svg>
+                  </span>
+                  Add-ons
+                </a>
+              </div>
+
+              <!-- Road Tax -->
+              <div id="vehicleTax" class="vehicle-wrapper">
+                <div class="vehicle-lists--header d-flex justify-content-between">
+                  <div class="h3">Road Tax, Licenses &amp; Fees</div>
+                </div>
+
+                <div class="list-price">
+                  <div class="list-price--item d-flex justify-content-between">
+                    <div class="list-price-desc">VES Surcharge/Rebate</div>
+                    <div class="list-price-notes">$10,000.00</div>
+                  </div>
+
+                  <div class="list-price--item d-flex justify-content-between">
+                    <div class="list-price-desc">Registration Fee</div>
+                    <div class="list-price-notes">Inclusive</div>
+                  </div>
+
+                  <div id="retentionFee" class="list-price--item justify-content-between d-none">
+                    <div class="list-price-desc">Number Retention Fee</div>
+                    <div class="list-price-notes">$100</div>
+                  </div>
+
+                  <div class="list-price--item d-flex justify-content-between">
+                    <div class="list-price-desc">Road Tax</div>
+                    <div id="roadTaxPrice" class="list-price-notes">Inclusive</div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="custom-control custom-radio">
+                      <input type="radio" id="roadTax6" name="road-tax" value="6months" class="custom-control-input" checked>
+                      <label class="custom-control-label" for="roadTax6">6 months</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                      <input type="radio" id="roadTax12" name="road-tax" value="12months" class="custom-control-input">
+                      <label class="custom-control-label" for="roadTax12">12 months</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Others -->
+              <div id="vehicleOthers" class="vehicle-wrapper last">
+                <div class="vehicle-lists--header">
+                  <div class="h3">Others</div>
+                </div>
+
+                <div class="btn-box d-flex justify-content-between">
+                  <div class="text">Accessories Discount (if applicable)</div>
+                  <div class="cta">
+                    <div class="input-field d-none">
+                      <input type="text" class="others-input input-numbers-only" name="accessoriesDiscount" value="" pattern="\d*">
+                      <a class="clear" href="#">
+                        <img src="../../assets/sdp/images/icons/clear.svg">
+                      </a>
+                    </div>
+
+                    <a href="#" class="btn-add">Add</a>
+                  </div>
+                </div>
+
+                <div class="btn-box d-flex justify-content-between">
+                  <div class="text">Promo Discount (if applicable)</div>
+                  <div class="cta">
+                    <div class="input-field d-none">
+                      <input type="text" class="others-input input-numbers-only" name="promoDiscount" value="" pattern="\d*">
+                      <a class="clear" href="#">
+                        <img src="../../assets/sdp/images/icons/clear.svg">
+                      </a>
+                    </div>
+
+                    <a href="#" class="btn-add">Add</a>
+                  </div>
+                </div>
+
+                <div class="btn-box d-flex justify-content-between">
+                  <div class="text">COE Refund (if applicable)</div>
+                  <div class="cta">
+                    <div class="input-field d-none">
+                      <input type="text" class="others-input input-numbers-only" name="coeRefund" value="" pattern="\d*">
+                      <a class="clear" href="#">
+                        <img src="../../assets/sdp/images/icons/clear.svg">
+                      </a>
+                    </div>
+
+                    <a href="#" class="btn-add">Add</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- <a href="step-3.html" class="btn btn-primary btn-submit mt-40">Continue to Finance & Insurance</a> -->
+
+              <button type="submit" class="btn btn-primary btn-submit">Continue to Finance & Insurance</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </section>
+</main>
+
+<!-- Modal -->
+<div class="modal fade modal-full show" id="modalAddOns" tabindex="-1" role="dialog" aria-labelledby="modalAddOnsLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header d-block">
+        <h2 class="modal-title" id="modalAddOnsLabel">Add-ons (Optional)</h2>
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"> Close</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="accordion accordion-icon" id="accordionAddOns" role="tablist" aria-multiselectable="true">
+              </div>            
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-3 d-flex align-items-center justify-content-end">
+              <div class="text-right">
+                <span class="addon-no">0</span> items added
+                <div class="h2 price-addon">$<span class="addon-total"></span></div>
+              </div>
+            </div>
+            <div class="col-9 d-flex align-items-center justify-content-end">
+              <button type="button" class="btn btn-primary" data-dismiss="modal" style="height: 90px;">Done</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="toast-body d-flex align-items-center">
+    <span>Item removed.</span>
+    <span class="undo">Undo</span>
+    <button type="button" class="ml-auto mr-2 close" data-dismiss="toast" aria-label="Close">
+      <span aria-hidden="true">
+        <img src="../../assets/sdp/images/icons/x.svg">
+      </span>
+    </button>
+  </div>
+</div>
+<!-- build:jsLib -->
+<script src="../../assets/sdp/scripts/libs.js"></script>
+<!-- endbuild -->
+<!-- build:jsMain -->
+<script src="../../assets/sdp/scripts/main.js"></script>
+<!-- endbuild -->
+
+</body>
+</html>

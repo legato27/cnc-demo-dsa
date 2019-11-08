@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Pan Isabelle</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- build:css -->
+  <link rel="stylesheet" href="../../assets/sdp/styles/selectize.default.css">
+  <link rel="stylesheet" href="../../assets/sdp/styles/style.min.css">
+  <link rel="stylesheet" href="../../assets/sdp/styles/oi-style.css">
+  <!-- endbuild -->
+</head>
+<body class="sdp step-4">
+  <header id="mainHeader">
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="#" class="btn-back">
+        <svg class="icon icon-arrow-prev " role="img" aria-hidden="true">
+          <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-arrow-prev"></use>
+        </svg>
+      </a>
+  
+      <div class="steps">
+        <ul>
+          <li class="list-step-1">
+            <a href="step-1.html">
+              <div class="steps--icon">
+                <small>
+                  <svg class="icon icon-tick " role="img" aria-hidden="true">
+                    <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-tick"></use>
+                  </svg>
+                </small>
+                <svg class="icon icon-stepper-active " role="img" aria-hidden="true">
+                  <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-stepper-active"></use>
+                </svg>
+                <span>1</span>
+              </div>
+              <div class="steps--text">Customer</div>
+            </a>
+          </li>
+          <li class="list-step-2">
+            <a href="step-2.html">
+              <div class="steps--icon">
+                <small>
+                  <svg class="icon icon-tick " role="img" aria-hidden="true">
+                    <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-tick"></use>
+                  </svg>
+                </small>
+                <svg class="icon icon-stepper-active " role="img" aria-hidden="true">
+                  <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-stepper-active"></use>
+                </svg>
+                <span>2</span>
+              </div>
+              <div class="steps--text">Vehicle Purchase</div>
+            </a>
+          </li>
+          <li class="list-step-3">
+            <a href="step-3.html">
+              <div class="steps--icon">
+                <small>
+                  <svg class="icon icon-tick " role="img" aria-hidden="true">
+                    <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-tick"></use>
+                  </svg>
+                </small>
+                <svg class="icon icon-stepper-active " role="img" aria-hidden="true">
+                  <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-stepper-active"></use>
+                </svg>
+                <span>3</span>
+              </div>
+              <div class="steps--text">Finance &amp; Insurance</div>
+            </a>
+          </li>
+          <li class="list-step-4">
+            <a href="step-4.html">
+              <div class="steps--icon">
+                <small>
+                  <svg class="icon icon-tick " role="img" aria-hidden="true">
+                    <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-tick"></use>
+                  </svg>
+                </small>
+                <svg class="icon icon-stepper-active " role="img" aria-hidden="true">
+                  <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-stepper-active"></use>
+                </svg>
+                <span>4</span>
+              </div>
+              <div class="steps--text">Trade-in</div>
+            </a>
+          </li>
+          <li class="list-step-5">
+            <a href="step-5.html">
+              <div class="steps--icon">
+                <small>
+                  <svg class="icon icon-tick " role="img" aria-hidden="true">
+                    <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-tick"></use>
+                  </svg>
+                </small>
+                <svg class="icon icon-stepper-active " role="img" aria-hidden="true">
+                  <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-stepper-active"></use>
+                </svg>
+                <span>5</span>
+              </div>
+              <div class="steps--text">Deposit</div>
+            </a>
+          </li>
+          <li class="list-step-6">
+            <a href="step-6.html">
+              <div class="steps--icon">
+                <small>
+                  <svg class="icon icon-tick " role="img" aria-hidden="true">
+                    <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-tick"></use>
+                  </svg>
+                </small>
+                <svg class="icon icon-stepper-active " role="img" aria-hidden="true">
+                  <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-stepper-active"></use>
+                </svg>
+                <span>6</span>
+              </div>
+              <div class="steps--text">Review</div>
+            </a>
+          </li>
+        </ul>
+        <div class="bg-line"></div>
+      </div>
+  
+      <a href="../../index.html" class="btn-save">Save &amp; Exit</a>
+    </div>
+  </header>
+  <header class="d-none editHeader">
+    <h2>Editing</h2>
+    <span onclick="modStep4.submitTradeIn();">
+      <h4>Save changes</h4>
+    </span>
+  </header>
+  <main role="main">
+    <section class="section-wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <form id="tradeInForm" class="form-init" onsubmit="modStep4.submitTradeIn();return false;" novalidate>
+              <div class="page-title d-flex justify-content-between align-items-center">
+                <h1>Used Car Trade-in</h1>
+                <span class="link" onclick="modStep4.skip();"><b>Skip, No Trade-in Car</b></span>
+              </div>
+
+              <div class="form-group">
+                <label for="make">Make</label>
+                <input type="text" class="form-control select" name="make" id="make" autocomplete="off" placeholder="Enter brand">
+                <ul class="d-none select-list" id="makes"></ul>
+              </div>
+              <div class="form-group">
+                <label for="model">Model</label>
+                <input type="text" class="form-control select" id="model" name="model" aria-describedby="model" placeholder="Enter model" aria-required="true" >
+              </div>
+              <div class="form-group">
+                <label for="regNo">Vehicle Registration Number</label>
+                <input type="text" class="form-control text-uppercase" id="regNo" name="regNo" aria-describedby="regNo" aria-required="true" >
+              </div>
+              <div class="form-group with-currency">
+                <label for="tradeValue">Trade-in Value</label>
+                <div class="d-flex">
+                  <span class="currency">$</span>
+                  <input type="text" class="form-control input-numbers-only is-number money" id="tradeValue" name="tradeValue" aria-describedby="tradeValue" placeholder="" aria-required="true" pattern="\d*">
+                </div>
+                <label for="tradeValue">Inclusive of GST & Road Tax</label>
+              </div>
+              <div class="form-group with-currency">
+                <label for="gms">GMS Package (optional)</label>
+                <div class="d-flex">
+                  <span class="currency">$</span>
+                  <input type="text" class="form-control input-numbers-only is-number money" id="gms" name="gms" aria-describedby="gms" placeholder="" aria-required="true" pattern="\d*">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="usedVehicleFinanceCo">Used Vehicle Finance Company (optional)</label>
+                <input type="text" class="form-control" id="usedVehicleFinanceCo" name="usedVehicleFinanceCo" aria-describedby="usedVehicleFinanceCo" placeholder="Please type here">
+                <ul class="d-none select-list" id="usedVehicleFinanceCoList">
+                  <li>Citibank Singapore Limited</li>
+                  <li>Maybank Singapore Limited</li>
+                  <li>DBS Bank Ltd</li>
+                  <li>Hitachi Capital Asia Pacific Pte Ltd</li>
+                  <li>AIG Asia Pacific Insurance Pte Ltd</li>
+                  <li>Goldbell Financial Services Pte Ltd</li>
+                  <li>HL Bank</li>
+                  <li>United Overseas Bank Limited</li>
+                  <li>Standard Chartered Bank (Singapore) Ltd</li>
+                  <li>Daimler Financial Services Africa & Asia Pacific Ltd</li>
+                </ul>
+              </div>
+              <div class="form-group with-currency">
+                <label for="settlementAmt">Full Settlement Amount (optional)</label>
+                <div class="d-flex">
+                  <span class="currency">$</span>
+                  <input type="text" class="form-control input-numbers-only is-number money" id="settlementAmt" name="settlementAmt" aria-describedby="settlementAmt" placeholder="" aria-required="true" pattern="\d*">
+                </div>
+              </div>
+              <button id="mainBtn" type="submit" class="btn btn-primary btn-submit">Continue to Deposit</button>
+              <button id="editBtn" type="submit" class="d-none btn btn-primary btn-submit">Save Changes</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <!-- build:jsLib -->
+  <script src="../../assets/sdp/scripts/libs.js"></script>
+  <!-- endbuild -->
+  <!-- build:jsMain -->
+  <script src="../../assets/sdp/scripts/main.js"></script>
+  <!-- endbuild -->
+
+</body>
+</html>

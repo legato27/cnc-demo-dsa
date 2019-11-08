@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Pan Isabelle</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- build:css -->
+  <link rel="stylesheet" href="../../assets/sdp/styles/style.min.css">
+  <link rel="stylesheet" href="../../assets/sdp/styles/oi-style.css">
+  <!-- endbuild -->
+</head>
+<body class="sdp step-5">
+  <header>
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="#" class="btn-back">
+        <svg class="icon icon-arrow-prev " role="img" aria-hidden="true">
+          <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-arrow-prev"></use>
+        </svg>
+      </a>
+  
+      <div class="steps">
+        <ul>
+          <li class="list-step-1">
+            <a href="step-1.html">
+              <div class="steps--icon">
+                <small>
+                  <svg class="icon icon-tick " role="img" aria-hidden="true">
+                    <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-tick"></use>
+                  </svg>
+                </small>
+                <svg class="icon icon-stepper-active " role="img" aria-hidden="true">
+                  <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-stepper-active"></use>
+                </svg>
+                <span>1</span>
+              </div>
+              <div class="steps--text">Customer</div>
+            </a>
+          </li>
+          <li class="list-step-2">
+            <a href="step-2.html">
+              <div class="steps--icon">
+                <small>
+                  <svg class="icon icon-tick " role="img" aria-hidden="true">
+                    <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-tick"></use>
+                  </svg>
+                </small>
+                <svg class="icon icon-stepper-active " role="img" aria-hidden="true">
+                  <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-stepper-active"></use>
+                </svg>
+                <span>2</span>
+              </div>
+              <div class="steps--text">Vehicle Purchase</div>
+            </a>
+          </li>
+          <li class="list-step-3">
+            <a href="step-3.html">
+              <div class="steps--icon">
+                <small>
+                  <svg class="icon icon-tick " role="img" aria-hidden="true">
+                    <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-tick"></use>
+                  </svg>
+                </small>
+                <svg class="icon icon-stepper-active " role="img" aria-hidden="true">
+                  <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-stepper-active"></use>
+                </svg>
+                <span>3</span>
+              </div>
+              <div class="steps--text">Finance &amp; Insurance</div>
+            </a>
+          </li>
+          <li class="list-step-4">
+            <a href="step-4.html">
+              <div class="steps--icon">
+                <small>
+                  <svg class="icon icon-tick " role="img" aria-hidden="true">
+                    <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-tick"></use>
+                  </svg>
+                </small>
+                <svg class="icon icon-stepper-active " role="img" aria-hidden="true">
+                  <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-stepper-active"></use>
+                </svg>
+                <span>4</span>
+              </div>
+              <div class="steps--text">Trade-in</div>
+            </a>
+          </li>
+          <li class="list-step-5">
+            <a href="step-5.html">
+              <div class="steps--icon">
+                <small>
+                  <svg class="icon icon-tick " role="img" aria-hidden="true">
+                    <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-tick"></use>
+                  </svg>
+                </small>
+                <svg class="icon icon-stepper-active " role="img" aria-hidden="true">
+                  <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-stepper-active"></use>
+                </svg>
+                <span>5</span>
+              </div>
+              <div class="steps--text">Deposit</div>
+            </a>
+          </li>
+          <li class="list-step-6">
+            <a href="step-6.html">
+              <div class="steps--icon">
+                <small>
+                  <svg class="icon icon-tick " role="img" aria-hidden="true">
+                    <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-tick"></use>
+                  </svg>
+                </small>
+                <svg class="icon icon-stepper-active " role="img" aria-hidden="true">
+                  <use xlink:href="../../assets/sdp/images/icons/icons.svg#icon-stepper-active"></use>
+                </svg>
+                <span>6</span>
+              </div>
+              <div class="steps--text">Review</div>
+            </a>
+          </li>
+        </ul>
+        <div class="bg-line"></div>
+      </div>
+  
+      <a href="../../index.html" class="btn-save">Save &amp; Exit</a>
+    </div>
+  </header>
+  <main role="main">
+    <section class="section-wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <form id="depositForm" class="form-init" onsubmit="modStep5.submitDeposit();return false;" novalidate>
+              <div class="page-title">
+                <h1>Deposit</h1>
+              </div>
+              <div class="form-group with-currency">
+                <label for="vehDeposit">Vehicle Deposit</label>
+                <div class="d-flex">
+                  <span class="currency">$</span>
+                  <input type="text" class="form-control input-numbers-only is-number money" id="vehDeposit" name="vehDeposit" aria-describedby="vehDeposit" placeholder="" aria-required="true" value="5,000" pattern="\d*">
+                </div>
+              </div>
+              <div class="form-group with-currency">
+                <label for="coeDeposit">COE Deposit</label>
+                <div class="d-flex">
+                  <span class="currency">$</span>
+                  <input type="text" class="form-control input-numbers-only is-number money" id="coeDeposit" name="coeDeposit" aria-describedby="coeDeposit" placeholder="" aria-required="true" value="5,000" pattern="\d*">
+                </div>
+              </div>
+              <div class="page-title">
+                <h2>Estimated delivery period</h2>
+              </div>
+              <div id="deliveryFrom" class="form-group radio-group">
+                <label>From</label>
+                <div class="btn-group-toggle d-flex" data-toggle="buttons">
+                </div>
+              </div>
+              <div id="deliveryTo" class="form-group radio-group d-none">
+                <label>To</label>
+                <div class="btn-group-toggle d-flex" data-toggle="buttons">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="instructions">Instructions</label>
+                <textarea class="form-control materialize-textarea" id="instructions" name="instructions" rows="1"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-submit">Continue to Review</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+<!-- build:jsLib -->
+<script src="../../assets/sdp/scripts/libs.js"></script>
+<!-- endbuild -->
+<!-- build:jsMain -->
+<script src="../../assets/sdp/scripts/main.js"></script>
+<!-- endbuild -->
+
+</body>
+</html>
